@@ -52,7 +52,7 @@ body {
 
 .pads button {
   width: 100%;
-  height: 7%;
+  height: 100%;
   margin: 10% 10% 10% 10%;    
   background-color: var(--purple);
   cursor: pointer;
