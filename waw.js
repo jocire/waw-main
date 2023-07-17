@@ -5,11 +5,10 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 
 const audioContext = new AudioContext();
 
-
  // check if context is in suspended state (autoplay policy)
  if (AudioContext.state === 'suspended') {
-    AudioContext.resume();
-  }
+  AudioContext.resume();
+}
 
 const pannerOptions = { pan: 0 };
 

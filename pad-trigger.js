@@ -12,7 +12,7 @@ pad8.addEventListener('keydown', trigger);
 function trigger(e) {
   // check if context is in suspended state (autoplay policy)
   if (AudioContext.state === 'suspended') {
-    AudioContext.resume();const audioCtx = new AudioContext();
+    AudioContext.resume();    
   }
    
   if (e.keyCode === 65) {
