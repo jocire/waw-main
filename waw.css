@@ -23,6 +23,10 @@
   box-sizing: border-box;
 }
 
+.padcolor {
+  background-color: var(--yellow);
+}
+
 body {
   background-color: var(--black); 
   font-family: sans-serif, system-ui;
@@ -69,11 +73,7 @@ body {
   
 }
 
-.padcolor {
-  background-color: var(--yellow);
-}
-
-  .pad button {
+.pad button {
     width: 4%;
     height: 4%;
     min-width: 50px;
