@@ -1,20 +1,29 @@
-// trigger pads with the keys a,s,d,f,g,h,j,k
+  // trigger pads with the keys a,s,d,f,g,h,j,k
 
-pad1.addEventListener('keydown', trigger);
-pad2.addEventListener('keydown', trigger);
-pad3.addEventListener('keydown', trigger);
-pad4.addEventListener('keydown', trigger);
-pad5.addEventListener('keydown', trigger);
-pad6.addEventListener('keydown', trigger);
-pad7.addEventListener('keydown', trigger);
-pad8.addEventListener('keydown', trigger);
+  pad1.addEventListener('keydown', trigger);
+  pad2.addEventListener('keydown', trigger);
+  pad3.addEventListener('keydown', trigger);
+  pad4.addEventListener('keydown', trigger);
+  pad5.addEventListener('keydown', trigger);
+  pad6.addEventListener('keydown', trigger);
+  pad7.addEventListener('keydown', trigger);
+  pad8.addEventListener('keydown', trigger);
+
+  pad1.removeEventListener('keyup', trigger);
+  pad2.removeEventListener('keyup', trigger);
+  pad3.removeEventListener('keyup', trigger);
+  pad4.removeEventListener('keyup', trigger);
+  pad5.removeEventListener('keyup', trigger);
+  pad6.removeEventListener('keyup', trigger);
+  pad7.removeEventListener('keyup', trigger);
+  pad8.removeEventListener('keyup', trigger);
 
 function trigger(e) {
   // check if context is in suspended state (autoplay policy)
   if (AudioContext.state === 'suspended') {
     AudioContext.resume();    
   }
-   
+
   if (e.keyCode === 65) {
     e.preventDefault();
     document.getElementById("pad1").click(); 

@@ -8,12 +8,12 @@
 pad1.addEventListener('click', function() {
     audioElement1.load();
     audioElement1.play();
-    pad1.onmouseleave = function() {
+    pad1.onmouseleave = function() {        
         if (document.selection) // IE
         document.selection.empty();
         else
         window.getSelection().removeAllRanges();
-    }
+    }       
 });
 
 // Pad 2
