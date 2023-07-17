@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="waw.css">
+    <title>WAW</title>
+</head>
+<body>
+    <main class="main-interface">
+        <div class="title">
+            <h1>WAW <span>Web Audio Workstation</span></h1>            
+        </div>
+      
+        <aside class="audio">
+            <audio id="sample1" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Bass Drum [BD]\E808_BD[long]-02.wav" type="audio/wav">
+            </audio>            
+            <audio id="sample2" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Clap [CP]\E808_CP-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample3" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Snare Drum [SD]\E808_SD-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample4" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Closed Hi Hat [CH]\E808_CH-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample5" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Congas [HC-MC-LC]\E808_HC-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample6" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Cowbell [CB]\E808_CB-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample7" crossorigin="anonymous">
+                <source src="src\musicradar-808-samples\Hits\Cymbal [CY]\E808_CY-01.wav" type="audio/wav">
+            </audio>
+            <audio id="sample8" crossorigin="anonymous">                
+                <source src="src\musicradar-808-samples\Hits\Claves [CL]\E808_CL-01.wav" type="audio/wav">
+            </audio>
+        </aside>
+
+
+        <article id="sampler" class="sampler">
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner1" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume1"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad1" data-playing="false" role="switch" aria-checked="false">
+                       A
+                    </button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner2" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume2"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad2" data-playing="false" role="switch" aria-checked="false">S</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner3" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume3"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad3" data-playing="false" role="switch" aria-checked="false">D</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner4" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume4"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad4" data-playing="false" role="switch" aria-checked="false">F</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner5" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume5"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad5" data-playing="false" role="switch" aria-checked="false">G</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner6" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume6"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad6" data-playing="false" role="switch" aria-checked="false">H</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner7" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume7"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad7" data-playing="false" role="switch" aria-checked="false">J</button>
+                </div>
+            </section>
+            <section class="channel">
+                <div class="pan">
+                    <span>L</span><input type="range" id="panner8" min="-1" max="1" value="0" step="0.01"><span>R</span>
+                </div>
+                <div class="volume">
+                    <input type="range" orient="vertical" id="volume8"  min="0" max="2" value="1" step="0.01"/><span>Vol</span>
+                </div>
+                <div class="pads">
+                    <button id="pad8" data-playing="false" role="switch" aria-checked="false">K</button>
+                </div>
+            </section>   
+        </article>
+      
+    </main>
+  
+    <script type="text/javascript" src="waw.js"></script>
+    <script type="text/javascript" src="click.js"></script> 
+    <script type="text/javascript" src="pad-trigger.js"></script>    
+    <script type="text/javascript" src="controls.js"></script>
+    
+    
+</body>
+</html>

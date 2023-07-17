@@ -1,0 +1,123 @@
+.main-interface {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;    
+}
+h1 {
+    color: purple;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 500;
+    border-bottom: 1px solid purple;
+}
+span {
+    color: purple;
+    font-size: 70%;
+    font-weight: 100;
+}
+.title {
+    display: inline;
+}
+.sampler {
+    width: 75vw;
+    height: auto;
+    border: 1px solid black;
+    background-color: purple; 
+    display: inline-flex;
+}
+.channel {
+    width: 12%;
+    background-color: black;
+    border: 1px solid purple;
+}
+.pads {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;    
+}
+.pads button {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0  10px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.pads button:focus-within {
+    border: 2px solid white;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+}
+
+.channel:focus-within {
+    background-color: rgba(17, 17, 17, 0.63);
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+.volume input[type=range][orient=vertical]  {
+      writing-mode: bt-lr;      
+      /*WebKit*/width: 10%;
+      height: 10%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: auto;
+      -webkit-writing-mode: bt-lr;
+      -ms-writing-mode: bt-lr;
+      cursor: pointer;            
+}
+
+.volume span {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.volume {
+    display: flex;
+    flex-direction: column;
+}
+
+.pan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7%;       
+}
+
+.pan input {
+    width: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.pan span {
+    font-family: sans-serif;
+    font-size: 0.5em;
+    color: white;
+    font-weight: 100;
+}
+
+.padcolor {
+    background-color: rgba(115, 108, 214, 0.945);    
+}
+
+
+
+
+
