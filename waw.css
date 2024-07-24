@@ -63,12 +63,12 @@ body {
 }
 
 .pads button:focus-within {
-  border: 2px solid white;
-  border-radius: 4px;
+  border: 2px solid white;  
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
-  -o-border-radius: 4px;  
+  -o-border-radius: 4px; 
+  border-radius: 4px; 
 }
 
 .pad button {    
@@ -270,4 +270,10 @@ input[type=range]:focus::-moz-range-thumb {
 
 input[type=range]:focus::-ms-thumb {
   background-color: var(--boxHigh);
+}
+
+@media (max-width: 1024px) {
+  #sampler {
+    width: 90vw;
+  }
 }
