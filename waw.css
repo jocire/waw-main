@@ -154,6 +154,14 @@ span {
   margin: 10%;       
 }
 
+.slide > input, .delay > input, .reverb > input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;  
+  width: 75%;
+}
+
 .pan input {
   width: 75%;
   cursor: pointer;
