@@ -32,6 +32,8 @@ body {
   font-family: sans-serif, system-ui;
   font-size: 90%;
   color: var(--white);
+  width: auto;
+  margin: 0;
 }
 
 .pads {
