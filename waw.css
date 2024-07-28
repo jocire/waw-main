@@ -172,6 +172,22 @@ span {
   margin: 10%;
 }
 
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+}
+
+.record-controls {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+}
+
+.record-controls > button {
+  margin-right: 3%;
+}
+
 .slide > input, .delay > input, .reverb > input {
   display: flex;
   justify-content: center;
