@@ -86,10 +86,10 @@ body {
     display: none;
   }
   
-.main-interface {
-    width: 100vw;
-    height: 100vh;
-    background-color: black;    
+.main-interface {  
+  width: fit-content;
+  height: auto;
+  background-color: black;    
 }
 
 h1 {
@@ -111,8 +111,8 @@ span {
 }
 
 .sampler {
-    width: 75%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border: 1px solid black;
     background-color: gray; 
     display: inline-flex;
@@ -128,18 +128,18 @@ span {
     background-color: rgba(17, 17, 17, 0.63);
 }
 
-.volume input[type=range][orient=vertical]  {
-      writing-mode: bt-lr;
-      appearance: none;
-      /*IE*/-webkit-appearance: slider-vertical;
-      /*WebKit*/width: 10%;
-      height: 10%;
+.volume input[type=range][orient=vertical]  {     
+      -webkit-appearance: slider-vertical;
+      width: 100%;
+      height: 40%;
       display: flex;
       flex-direction: row;
       justify-content: center;
       margin: auto;
       -webkit-writing-mode: bt-lr;
       -ms-writing-mode: bt-lr;
+      writing-mode: bt-lr;
+      appearance: slider-vertical;
       cursor: pointer; 
            
 }
@@ -190,11 +190,17 @@ span {
    
 }
 
+#sampler > section > div > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+}
+
 /* range input styling ~~~~~~~~~~~~~~~~~~~ */
 
-input[type=range] {
-  appearance: none;
+input[type=range] { 
   -webkit-appearance: none;
+  appearance: none;
   background: transparent;
 }
 
@@ -272,8 +278,81 @@ input[type=range]:focus::-ms-thumb {
   background-color: var(--boxHigh);
 }
 
-@media (max-width: 1024px) {
-  #sampler {
-    width: 90vw;
-  }
+/* Add this to your CSS file */
+
+@keyframes blink {
+  0% { background-color: yellow; }
+  50% { background-color: white; }
+  100% { background-color: yellow; }
+}
+
+.blink {
+  animation: blink 0.3s ease;
+}
+
+.active-button {
+  background-color: yellow !important;
+}
+
+
+/* SEQUENCER */
+
+/* Base styles for the sequencer grid */
+.sequencer-grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);   
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.sequencer-step {
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgrey;
+    cursor: pointer;
+    background-color: gray;
+}
+
+.sequencer-step.active {
+    background-color: var(--purple);
+}
+
+.sequencer-step.current-step {
+  border: 1px solid lightgrey;
+  box-shadow: 0 0 5px gray;
+  background-color: var(--yellow);
+}
+
+.pads button {
+    cursor: pointer;
+}
+
+.record-controls {
+    margin-top: 20px;
+}
+
+.record-controls button {
+    margin-right: 10px;
+}
+
+.bpm-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.bpm-controls label {
+    margin-right: 10px;
+}
+
+#bpm-display {    
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.record-controls > button {
+  height: 40px;
+  border-radius: 90px;  
+  margin-bottom: 20px;
 }
