@@ -1,17 +1,17 @@
 :root {
-    --orange: hsla(32, 100%, 50%, 1);
-    --yellow: hsla(49, 99%, 50%, 1);
-    --lime: hsla(82, 90%, 45%, 1);
-    --green: hsla(127, 81%, 41%, 1);
-    --red: hsla(342, 93%, 53%, 1);
-    --pink: hsla(314, 85%, 45%, 1);
-    --blue: hsla(211, 92%, 52%, 1);
-    --purple: hsla(283, 92%, 44%, 1);
-    --cyan: hsla(195, 98%, 55%, 1);
-    --white: hsla(0, 0%, 95%, 1);
-    --black: hsla(0, 0%, 10%, 1);
-  
-     /* abstract our colours */
+  --orange: hsla(32, 100%, 50%, 1);
+  --yellow: hsla(49, 99%, 50%, 1);
+  --lime: hsla(82, 90%, 45%, 1);
+  --green: hsla(127, 81%, 41%, 1);
+  --red: hsla(342, 93%, 53%, 1);
+  --pink: hsla(314, 85%, 45%, 1);
+  --blue: hsla(211, 92%, 52%, 1);
+  --purple: hsla(283, 92%, 44%, 1);
+  --cyan: hsla(195, 98%, 55%, 1);
+  --white: hsla(0, 0%, 95%, 1);
+  --black: hsla(0, 0%, 10%, 1);
+
+  /* abstract our colours */
   --boxMain: var(--pink);
   --boxSecond: var(--purple);
   --boxHigh: var(--yellow);
@@ -35,19 +35,17 @@ body {
 }
 
 .pads {
-    display: flex;
-    justify-content: center;
-    margin: 0.5%;
-    
+  display: flex;
+  justify-content: center;
+  margin: 0.5%;
 }
-  
+
 .pad {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: auto;   
   margin-bottom: 5%; 
- 
 }
 
 .pads button {
@@ -55,37 +53,28 @@ body {
   height: 50px;
   margin: 10% 10% 10% 10%;      
   cursor: pointer;  
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;  
-  border-radius: 4px;
+  border-radius: var(--borderRad);
 }
 
 .pads button:focus-within {
   border: 2px solid white;  
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px; 
-  border-radius: 4px; 
+  border-radius: var(--borderRad); 
 }
 
 .pad button {    
-    padding: 0;
-    background-color: var(--purple);
-    border: var(--border);
-  
-  }
-  
-  .pads button[aria-checked="true"] {
-    background-color: var(--boxHigh);
-  }
-  
-  .pads button span {
-    display: none;
-  }
-  
+  padding: 0;
+  background-color: var(--purple);
+  border: var(--border);
+}
+
+.pads button[aria-checked="true"] {
+  background-color: var(--boxHigh);
+}
+
+.pads button span {
+  display: none;
+}
+
 .main-interface {  
   width: fit-content;
   height: auto;
@@ -93,101 +82,99 @@ body {
 }
 
 h1 {
-    color: gray;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: 500;
-    border-bottom: 1px solid gray;
+  color: gray;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 500;
+  border-bottom: 1px solid gray;
 }
 
 span {
-    color: darkgray;
-    font-size: 70%;
-    font-weight: 100;
+  color: darkgray;
+  font-size: 70%;
+  font-weight: 100;
 }
 
 .title {
-    display: inline;
+  display: inline;
 }
 
 .sampler {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: gray; 
-    display: inline-flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: gray; 
+  display: inline-flex;
 }
 
 .channel {
-    width: 12%;
-    background-color: black;
-    border: 1px solid gray;
+  width: 12%;
+  background-color: black;
+  border: 1px solid gray;
 }
 
 .channel:focus-within {
-    background-color: rgba(17, 17, 17, 0.63);
+  background-color: rgba(17, 17, 17, 0.63);
 }
 
-.volume input[type=range][orient=vertical]  {     
-      -webkit-appearance: slider-vertical;
-      width: 100%;
-      height: 40%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin: auto;
-      -webkit-writing-mode: bt-lr;
-      -ms-writing-mode: bt-lr;
-      writing-mode: bt-lr;
-      appearance: slider-vertical;
-      cursor: pointer; 
-           
+.volume input[type=range][orient=vertical] {     
+  -webkit-appearance: slider-vertical;
+  -moz-appearance: textfield; /* Firefox fallback */
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  writing-mode: bt-lr;
+  appearance: slider-vertical;
+  cursor: pointer; 
 }
 
 .volume span {
-    font-family: sans-serif;
-    font-size: 0.5em;
-    color: white;
-    font-weight: 100;
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  color: white;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
 }
+
 .volume {
-    display: flex;
-    flex-direction: column;
-    margin: 10%;
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
 }
 
 .pan {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10%;       
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;       
 }
 
 .pan input {
-    width: 75%;
-    cursor: pointer;
-    outline: none;
+  width: 75%;
+  cursor: pointer;
+  outline: none;
 }
 
 .pan span {
-    font-family: sans-serif;
-    font-size: 0.5em;
-    color: white;
-    font-weight: 100;
+  font-family: sans-serif;
+  font-size: 0.5em;
+  color: white;
+  font-weight: 100;
 }
 
 .controls-main {
-    margin: 15% 2% 15% 2%;
-    color: white;
-    display: flex;
-    float: right;
-    font-size: 10px;
-    font-family: sans-serif;
-    justify-content: center;   
-   
+  margin: 15% 2% 15% 2%;
+  color: white;
+  display: flex;
+  float: right;
+  font-size: 10px;
+  font-family: sans-serif;
+  justify-content: center;   
 }
 
 #sampler > section > div > span {
@@ -200,6 +187,7 @@ span {
 
 input[type=range] { 
   -webkit-appearance: none;
+  -moz-appearance: none; /* Firefox fallback */
   appearance: none;
   background: transparent;
 }
@@ -294,27 +282,26 @@ input[type=range]:focus::-ms-thumb {
   background-color: yellow !important;
 }
 
-
 /* SEQUENCER */
 
 /* Base styles for the sequencer grid */
 .sequencer-grid {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);   
-    gap: 5px;
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);   
+  gap: 5px;
+  margin-top: 20px;
 }
 
 .sequencer-step {
-    width: 30px;
-    height: 30px;
-    border: 1px solid lightgrey;
-    cursor: pointer;
-    background-color: gray;
+  width: 30px;
+  height: 30px;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  background-color: gray;
 }
 
 .sequencer-step.active {
-    background-color: var(--purple);
+  background-color: var(--purple);
 }
 
 .sequencer-step.current-step {
@@ -324,31 +311,31 @@ input[type=range]:focus::-ms-thumb {
 }
 
 .pads button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .record-controls {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .record-controls button {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .bpm-controls {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .bpm-controls label {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 #bpm-display {    
-    margin-left: 10px;
-    font-weight: bold;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .record-controls > button {
