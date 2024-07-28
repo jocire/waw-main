@@ -154,12 +154,30 @@ span {
   margin: 10%;       
 }
 
+.slide {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+}
+
+.delay {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+}
+
+.reverb {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+}
+
 .slide > input, .delay > input, .reverb > input {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 10%;  
-  width: 75%;
+  width: auto;
 }
 
 .pan input {
