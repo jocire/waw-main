@@ -20,7 +20,7 @@
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box;    
 }
 
 .padcolor {
@@ -100,8 +100,8 @@ span {
 }
 
 .sampler {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: auto;
   border: 1px solid black;
   background-color: gray; 
   display: inline-flex;
@@ -343,3 +343,4 @@ input[type=range]:focus::-ms-thumb {
   border-radius: 90px;  
   margin-bottom: 20px;
 }
+
